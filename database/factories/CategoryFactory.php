@@ -7,6 +7,8 @@ use Faker\Generator as Faker;
 
 $factory->define(Category::class, function (Faker $faker) {
     return [
-        //
+        'name' => $faker->name(),
+        'pic'=> rtrim($faker->sentence(rand(3,6)),'.'),
+        'status' => $faker->boolean()
     ];
 });
